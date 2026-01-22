@@ -1,146 +1,162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BTS GitHub Pages Test</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #2b1055, #000000);
-      color: #f5f3ff;
-    }
-
-    .wrap {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-    }
-
-    .card {
-      width: min(820px, 100%);
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(8px);
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: rgba(167, 139, 250, 0.25);
-      border: 1px solid rgba(167, 139, 250, 0.6);
-      color: #ddd6fe;
-      font-weight: 700;
-      letter-spacing: 0.4px;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      margin: 0 0 6px;
-      font-size: 30px;
-      letter-spacing: 0.5px;
-    }
-
-    h2 {
-      margin: 0 0 16px;
-      font-size: 16px;
-      opacity: 0.85;
-      font-weight: 400;
-    }
-
-    .row {
-      margin: 12px 0;
-      padding: 12px 14px;
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 14px;
-    }
-
-    .label {
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.8;
-    }
-
-    code {
-      display: block;
-      margin-top: 6px;
-      white-space: pre-wrap;
-      word-break: break-word;
-      font-size: 14px;
-    }
-
-    button {
-      margin-top: 14px;
-      background: linear-gradient(135deg, #a78bfa, #7c3aed);
-      border: none;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 14px;
-      cursor: pointer;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    .footer {
-      margin-top: 18px;
-      font-size: 13px;
-      opacity: 0.75;
-      text-align: center;
-    }
-
-    .heart {
-      color: #c084fc;
-    }
-  </style>
+  <meta charset="utf-8">
+  <title>Pizza Ordering Form</title>
 </head>
-
 <body>
-  <div class="wrap">
-    <div class="card">
-      <div class="badge">💜 ARMY CONNECTED</div>
+  <header>
+    <h1>Pizza Ordering Form</h1>
+  </header>
 
-      <h1>GitHub Pages 성공 🎉</h1>
-      <h2>BTS-themed connection test page</h2>
+  <main>
+    <form action="#" method="post">
+      <section>
+        <h2>Contact Information</h2>
 
-      <div class="row">
-        <div class="label">Current URL</div>
-        <code id="url">Loading…</code>
-      </div>
+        <p>
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" required>
+        </p>
 
-      <div class="row">
-        <div class="label">Live Load Time</div>
-        <code id="time">Loading…</code>
-      </div>
+        <p>
+          <label for="phone">Phone:</label>
+          <input id="phone" name="phone" type="tel" required>
+        </p>
 
-      <button id="refresh">Refresh Timestamp</button>
+        <p>
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required>
+        </p>
+      </section>
 
-      <div class="footer">
-        Made with <span class="heart">💜</span> for ARMY ·  
-        If this updates after a commit, your GitHub Pages setup is solid.
-      </div>
-    </div>
-  </div>
+      <section>
+        <h2>Select Pizza Size</h2>
 
-  <script>
-    function update() {
-      document.getElementById("url").textContent = window.location.href;
-      document.getElementById("time").textContent = new Date().toString();
-    }
+        <p>
+          <label for="size">Pizza Size:</label>
+          <select id="size" name="size" required>
+            <option value="">--Select Size--</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xlarge">XLarge</option>
+          </select>
+        </p>
+      </section>
 
-    document.getElementById("refresh").addEventListener("click", update);
-    update();
-  </script>
+      <section>
+        <h2>Select Sauce</h2>
+
+        <fieldset>
+          <legend>Sauce Type</legend>
+
+          <p>
+            <input id="sauce-marinara" name="sauce" type="radio" value="marinara" required>
+            <label for="sauce-marinara">Marinara</label>
+          </p>
+
+          <p>
+            <input id="sauce-ranch" name="sauce" type="radio" value="ranch">
+            <label for="sauce-ranch">Ranch</label>
+          </p>
+
+          <p>
+            <input id="sauce-none" name="sauce" type="radio" value="none">
+            <label for="sauce-none">No Sauce</label>
+          </p>
+        </fieldset>
+      </section>
+
+      <section>
+        <h2>Select Toppings</h2>
+
+        <fieldset>
+          <legend>Toppings</legend>
+
+          <p>
+            <input id="top-pepperoni" name="toppings" type="checkbox" value="pepperoni">
+            <label for="top-pepperoni">Pepperoni</label>
+
+            <input id="top-sausage" name="toppings" type="checkbox" value="sausage">
+            <label for="top-sausage">Sausage</label>
+          </p>
+
+          <p>
+            <input id="top-mushrooms" name="toppings" type="checkbox" value="mushrooms">
+            <label for="top-mushrooms">Mushrooms</label>
+
+            <input id="top-pineapple" name="toppings" type="checkbox" value="pineapple">
+            <label for="top-pineapple">Pineapple</label>
+          </p>
+
+          <p>
+            <input id="top-peppers" name="toppings" type="checkbox" value="peppers">
+            <label for="top-peppers">Peppers</label>
+
+            <input id="top-onions" name="toppings" type="checkbox" value="onions">
+            <label for="top-onions">Onions</label>
+          </p>
+        </fieldset>
+      </section>
+
+      <section>
+        <h2>Additional Instructions</h2>
+
+        <p>
+          <label for="instructions">Add instructions</label><br>
+          <textarea id="instructions" name="instructions" rows="4" cols="24">Add instructions</textarea>
+        </p>
+
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+      </section>
+    </form>
+
+    <section aria-labelledby="games-heading">
+      <h3 id="games-heading">List of My Favorite Games</h3>
+
+      <table border="1">
+        <caption>Favorite Video Games</caption>
+        <thead>
+          <tr>
+            <th scope="col">Developer</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <!-- vertical merged cell -->
+            <th scope="rowgroup" rowspan="3">Bungie</th>
+            <td>Halo</td>
+            <td>2001</td>
+          </tr>
+          <tr>
+            <td>Halo 2</td>
+            <td>2004</td>
+          </tr>
+          <tr>
+            <td>Halo 3</td>
+            <td>2007</td>
+          </tr>
+          <tr>
+            <th scope="row">Mojang</th>
+            <td>Minecraft</td>
+            <td>2011</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <!-- horizontal merged cell -->
+            <th scope="row">Count:</th>
+            <td colspan="2">4</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
 </body>
 </html>

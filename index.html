@@ -3,57 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GitHub Pages Connection Test</title>
+  <title>BTS GitHub Pages Test</title>
+
   <style>
-    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #0b1220; color: #e5e7eb; }
-    .wrap { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
-    .card {
-      width: min(760px, 100%);
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #2b1055, #000000);
+      color: #f5f3ff;
     }
-    h1 { margin: 0 0 8px; font-size: 28px; }
+
+    .wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(820px, 100%);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+    }
+
     .badge {
       display: inline-block;
-      padding: 6px 10px;
+      padding: 6px 14px;
       border-radius: 999px;
-      background: rgba(34,197,94,0.15);
-      border: 1px solid rgba(34,197,94,0.35);
-      color: #86efac;
+      background: rgba(167, 139, 250, 0.25);
+      border: 1px solid rgba(167, 139, 250, 0.6);
+      color: #ddd6fe;
       font-weight: 700;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.4px;
       margin-bottom: 14px;
     }
-    .row { margin: 10px 0; padding: 10px 12px; background: rgba(255,255,255,0.05); border-radius: 12px; }
-    .label { opacity: 0.8; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
-    code { display: block; margin-top: 6px; white-space: pre-wrap; word-break: break-word; }
-    .small { opacity: 0.85; font-size: 14px; line-height: 1.5; }
-    .footer { margin-top: 14px; opacity: 0.7; font-size: 12px; }
-    button {
-      margin-top: 12px;
-      background: rgba(59,130,246,0.18);
-      border: 1px solid rgba(59,130,246,0.45);
-      color: #bfdbfe;
-      padding: 10px 12px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: 600;
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 30px;
+      letter-spacing: 0.5px;
     }
-    button:hover { background: rgba(59,130,246,0.26); }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 16px;
+      opacity: 0.85;
+      font-weight: 400;
+    }
+
+    .row {
+      margin: 12px 0;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    code {
+      display: block;
+      margin-top: 6px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 14px;
+      background: linear-gradient(135deg, #a78bfa, #7c3aed);
+      border: none;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 14px;
+      cursor: pointer;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .footer {
+      margin-top: 18px;
+      font-size: 13px;
+      opacity: 0.75;
+      text-align: center;
+    }
+
+    .heart {
+      color: #c084fc;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="card">
-      <div class="badge">✅ Connected</div>
-      <h1>GitHub Pages is working</h1>
-      <p class="small">
-        If you can see this page, your repository is successfully serving HTML via GitHub Pages.
-        The time below updates so you can confirm the live page is loading.
-      </p>
+      <div class="badge">💜 ARMY CONNECTED</div>
+
+      <h1>GitHub Pages 성공 🎉</h1>
+      <h2>BTS-themed connection test page</h2>
 
       <div class="row">
         <div class="label">Current URL</div>
@@ -61,14 +120,15 @@
       </div>
 
       <div class="row">
-        <div class="label">Build / Load Time (local)</div>
+        <div class="label">Live Load Time</div>
         <code id="time">Loading…</code>
       </div>
 
-      <button id="refresh">Refresh timestamp</button>
+      <button id="refresh">Refresh Timestamp</button>
 
       <div class="footer">
-        Tip: make a small edit (like changing this footer text), commit + push, then refresh the page to confirm updates deploy.
+        Made with <span class="heart">💜</span> for ARMY ·  
+        If this updates after a commit, your GitHub Pages setup is solid.
       </div>
     </div>
   </div>
@@ -78,6 +138,7 @@
       document.getElementById("url").textContent = window.location.href;
       document.getElementById("time").textContent = new Date().toString();
     }
+
     document.getElementById("refresh").addEventListener("click", update);
     update();
   </script>

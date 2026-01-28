@@ -1,162 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Pizza Ordering Form</title>
-</head>
-<body>
-  <header>
-    <h1>Pizza Ordering Form</h1>
-  </header>
+    <head>
+        <title>Tim Nguyen - CIS4004 Assignment Landing Page</title>
+    </head>
 
-  <main>
-    <form action="#" method="post">
-      <section>
-        <h2>Contact Information</h2>
+    <body>
+        <h1>Welcome to Tim Nguyen's CIS4004 Assignment Landing Page</h1>
+        <p>This is the landing page for my CIS4004 assignment. Please use the links below to navigate to different sections of my work.</p>
+        
+        <h2>Links</h2>
+        <ul>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="pizzaOrderingForm.html">Pizza Ordering Form</a></li>
+        </ul>
 
-        <p>
-          <label for="name">Name:</label>
-          <input id="name" name="name" type="text" required>
-        </p>
-
-        <p>
-          <label for="phone">Phone:</label>
-          <input id="phone" name="phone" type="tel" required>
-        </p>
-
-        <p>
-          <label for="email">Email:</label>
-          <input id="email" name="email" type="email" required>
-        </p>
-      </section>
-
-      <section>
-        <h2>Select Pizza Size</h2>
-
-        <p>
-          <label for="size">Pizza Size:</label>
-          <select id="size" name="size" required>
-            <option value="">--Select Size--</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="xlarge">XLarge</option>
-          </select>
-        </p>
-      </section>
-
-      <section>
-        <h2>Select Sauce</h2>
-
-        <fieldset>
-          <legend>Sauce Type</legend>
-
-          <p>
-            <input id="sauce-marinara" name="sauce" type="radio" value="marinara" required>
-            <label for="sauce-marinara">Marinara</label>
-          </p>
-
-          <p>
-            <input id="sauce-ranch" name="sauce" type="radio" value="ranch">
-            <label for="sauce-ranch">Ranch</label>
-          </p>
-
-          <p>
-            <input id="sauce-none" name="sauce" type="radio" value="none">
-            <label for="sauce-none">No Sauce</label>
-          </p>
-        </fieldset>
-      </section>
-
-      <section>
-        <h2>Select Toppings</h2>
-
-        <fieldset>
-          <legend>Toppings</legend>
-
-          <p>
-            <input id="top-pepperoni" name="toppings" type="checkbox" value="pepperoni">
-            <label for="top-pepperoni">Pepperoni</label>
-
-            <input id="top-sausage" name="toppings" type="checkbox" value="sausage">
-            <label for="top-sausage">Sausage</label>
-          </p>
-
-          <p>
-            <input id="top-mushrooms" name="toppings" type="checkbox" value="mushrooms">
-            <label for="top-mushrooms">Mushrooms</label>
-
-            <input id="top-pineapple" name="toppings" type="checkbox" value="pineapple">
-            <label for="top-pineapple">Pineapple</label>
-          </p>
-
-          <p>
-            <input id="top-peppers" name="toppings" type="checkbox" value="peppers">
-            <label for="top-peppers">Peppers</label>
-
-            <input id="top-onions" name="toppings" type="checkbox" value="onions">
-            <label for="top-onions">Onions</label>
-          </p>
-        </fieldset>
-      </section>
-
-      <section>
-        <h2>Additional Instructions</h2>
-
-        <p>
-          <label for="instructions">Add instructions</label><br>
-          <textarea id="instructions" name="instructions" rows="4" cols="24">Add instructions</textarea>
-        </p>
-
-        <p>
-          <button type="submit">Submit</button>
-        </p>
-      </section>
-    </form>
-
-    <section aria-labelledby="games-heading">
-      <h3 id="games-heading">List of My Favorite Games</h3>
-
-      <table border="1">
-        <caption>Favorite Video Games</caption>
-        <thead>
-          <tr>
-            <th scope="col">Developer</th>
-            <th scope="col">Title</th>
-            <th scope="col">Year</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <!-- vertical merged cell -->
-            <th scope="rowgroup" rowspan="3">Bungie</th>
-            <td>Halo</td>
-            <td>2001</td>
-          </tr>
-          <tr>
-            <td>Halo 2</td>
-            <td>2004</td>
-          </tr>
-          <tr>
-            <td>Halo 3</td>
-            <td>2007</td>
-          </tr>
-          <tr>
-            <th scope="row">Mojang</th>
-            <td>Minecraft</td>
-            <td>2011</td>
-          </tr>
-        </tbody>
-
-        <tfoot>
-          <tr>
-            <!-- horizontal merged cell -->
-            <th scope="row">Count:</th>
-            <td colspan="2">4</td>
-          </tr>
-        </tfoot>
-      </table>
-    </section>
-  </main>
-</body>
-</html>
+    </html>

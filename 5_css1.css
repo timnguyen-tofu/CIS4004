@@ -1,0 +1,68 @@
+body {
+    background-color: lightblue;
+}
+h1 {
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+h2 {  
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+#paragraph2 {
+    width: 850px;
+    height: 100px;
+    padding: 40px;
+    border: 5px solid green;
+    background-color: white;
+    margin: 15px;
+
+    line-height: 2.0;
+}
+
+.blue {
+    padding: 20px;
+    border: 2px solid black;
+    background-color: darkblue;
+    margin: 15px;
+
+    line-height: 1.0;
+    color: ghostwhite;
+}
+
+ol  li::marker {
+    font-size: 1.4em;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
+ol li a {
+    color: darkblue
+}
+
+section a {
+    color: orangered
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: lightgrey;
+    padding: 2px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+td {
+    background-color: white;
+    padding: 8px;
+    text-align: left;
+    border: 2px solid black;
+    line-height: 2em;
+}

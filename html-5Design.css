@@ -1,3 +1,13 @@
+/* =========================
+   BASIC PAGE SETUP
+   ========================= */
+
+/* IMPORTANT FIX:
+   This makes width include padding + border (so 15% stays truly 15%) */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Georgia, serif;
@@ -10,17 +20,19 @@ body {
    ========================= */
 
 #jumpMenu {
-    position: fixed;        /* stays in place when scrolling */
+    position: fixed;
     top: 0;
     left: 0;
 
-    width: 15%;             /* takes up left side of page */
+    width: 15%;
     height: 100%;
 
     background-color: #caa133;
     padding: 15px;
 
-    border-right: 5px solid black;
+    /* make sure it stays above the header edge */
+    z-index: 2000;
+    text-align: center;
 }
 
 #jumpMenu h2 {
@@ -29,9 +41,10 @@ body {
 }
 
 #jumpMenu a {
-    display: block;         /* each link on its own line */
+    display: block;
     margin: 12px 0;
     color: blue;
+    width: 100%;
 }
 
 
@@ -40,9 +53,11 @@ body {
    ========================= */
 
 header {
-    position: fixed;        /* stays at the top */
+    position: fixed;
     top: 0;
-    left: 15%;              /* starts after jump menu */
+
+    /* matches jump menu width */
+    left: 15%;
     width: 85%;
     height: 110px;
 
@@ -50,25 +65,38 @@ header {
     border-bottom: 5px solid black;
 
     text-align: center;
+
+    /* keep header above main content but below jump menu */
+    z-index: 1500;
 }
 
 /* Blog title */
 header p {
     font-size: 28px;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 10px 0 8px 0;
 }
 
-/* Navigation buttons */
-nav button {
-    width: 200px;
+/* NAV STRIP FIX:
+   This makes the nav area look like a full section behind buttons */
+header nav {
+    background-color: black;
+    padding: 10px 0;
+
+    /* keeps buttons in one row */
+    white-space: nowrap;
+}
+
+/* Buttons */
+header nav button {
+    width: 180px;
     padding: 10px;
-    margin: 0 10px;
+    margin: 0 18px;
 
     background-color: blue;
     color: white;
 
-    border: 8px solid black;
+    border: 6px solid black;
     font-size: 16px;
     font-weight: bold;
 }
@@ -79,14 +107,12 @@ nav button {
    ========================= */
 
 main {
-    margin-left: 15%;       /* make room for jump menu */
-    padding-top: 140px;     /* make room for header */
+    margin-left: 15%;
+    padding-top: 140px;   /* space for fixed header */
     padding-left: 30px;
     padding-right: 30px;
 }
 
-
-/* Page heading */
 main h1 {
     text-align: center;
     font-size: 42px;
@@ -99,12 +125,12 @@ main h1 {
 
 #container {
     display: flex;
-    flex-wrap: wrap;        /* allows articles to move when resized */
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 #container article {
-    width: 300px;           /* fixed width per instructions */
+    width: 300px;
     margin-bottom: 30px;
 }
 
@@ -137,6 +163,8 @@ main h1 {
 
     font-size: 36px;
     border: 2px solid black;
+
+    z-index: 3000;
 }
 
 

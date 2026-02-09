@@ -1,9 +1,4 @@
-/* =========================
-   BASIC PAGE SETUP
-   ========================= */
 
-/* IMPORTANT FIX:
-   This makes width include padding + border (so 15% stays truly 15%) */
 * {
     box-sizing: border-box;
 }
@@ -15,9 +10,7 @@ body {
 }
 
 
-/* =========================
-   JUMP MENU (LEFT SIDE)
-   ========================= */
+/*jump menu */
 
 #jumpMenu {
     position: fixed;
@@ -48,9 +41,7 @@ body {
 }
 
 
-/* =========================
-   HEADER (TOP BAR)
-   ========================= */
+/* header*/
 
 header {
     position: fixed;
@@ -77,8 +68,7 @@ header p {
     margin: 10px 0 8px 0;
 }
 
-/* NAV STRIP FIX:
-   This makes the nav area look like a full section behind buttons */
+
 header nav {
     background-color: black;
     padding: 10px 0;
@@ -87,7 +77,7 @@ header nav {
     white-space: nowrap;
 }
 
-/* Buttons */
+/* buttons */
 header nav button {
     width: 180px;
     padding: 10px;
@@ -102,9 +92,7 @@ header nav button {
 }
 
 
-/* =========================
-   MAIN CONTENT AREA
-   ========================= */
+/* main area */
 
 main {
     margin-left: 15%;
@@ -119,9 +107,7 @@ main h1 {
 }
 
 
-/* =========================
-   ARTICLES SECTION
-   ========================= */
+/* articles jump */
 
 #container {
     display: flex;
@@ -149,9 +135,7 @@ main h1 {
 }
 
 
-/* =========================
-   THANK YOU MESSAGE
-   ========================= */
+/* thanks box */
 
 #thanks {
     position: fixed;
@@ -168,9 +152,7 @@ main h1 {
 }
 
 
-/* =========================
-   FOOTER
-   ========================= */
+/* footer */
 
 footer {
     margin-top: 40px;

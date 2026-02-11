@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+
+/* left sidebar nav */
+
+#menuItems {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 15%;
+    height: 100vh;
+
+    background-color: black;
+
+    /* keeping it above most stuff */
+    z-index: 2000;
+    padding: 0;
+    margin: 0;
+}
+
+/* make the sidebar buttons look like big blocks */
+#menuItems button {
+    display: block;
+    width: 100%;
+
+    padding: 12px 0;
+    margin: 0;
+
+    background-color: blue;
+    color: white;
+
+    border: 1px solid black;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+#menuItems button:hover {
+    background-color: #caa133;
+}
+
+
+/* left sidebar recent articles dropdown list */
+
+#jumpMenu {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+
+    background-color: #caa133;
+
+    display: none;
+}
+#recentArticles:hover + #jumpMenu {
+    display: block;
+}
+#jumpMenu:hover {
+    display: block;
+}
+#jumpMenu li a {
+    display: block;
+    padding: 4px 0;
+
+    text-align: center;
+    color: blue;
+
+    text-decoration: none; /* removed underline */
+}
+#jumpMenu li a:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+/* top red header bar */
+
+header {
+    position: fixed;
+    top: 0;
+
+    left: 15%;
+    width: 85%;
+    height: 110px;
+
+    background-color: red;
+    border-bottom: 5px solid black;
+
+    text-align: center;
+
+}
+
+header p {
+    margin: 25px 0 0 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* main page area */
+
+main {
+    margin-left: 15%;
+    padding-top: 170px; /* makes room for the fixed header */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 42px;
+}
+
+/* anchor jumps stop below the fixed red header */
+#container article {
+    scroll-margin-top: 250px;
+}
+
+
+/* article layout */
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#container article {
+    width: 300px;
+    margin-bottom: 30px;
+
+   
+    transition: transform 2s;
+}
+
+#container article h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+#container article p {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+
+/* first letter styling */
+ 
+#container article p:first-of-type::first-letter {
+    font-family: "Times New Roman", serif;
+    font-size: 36px;
+}
+
+
+/* read more links */
+
+/* read more should stay blue and underlined */
+#container article a {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* arrow image after read more */
+#container article p a::after {
+    content: "";
+    display: inline-block;
+
+    width: 18px;
+    height: 18px;
+
+    margin-left: 6px;
+    vertical-align: middle;
+
+    background-image: url("arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* article hover effect */
+
+#container article h2,
+#container article p {
+    color: #b0b0b0;
+    transition: all 2s;
+}
+
+#container article:hover h2,
+#container article:hover p {
+    color: black;
+}
+
+#container article:hover {
+    transform: scale(1.05);
+}
+
+
+/* thank you */
+
+#thanks {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+
+    background-color: lightblue;
+    padding: 20px;
+
+    font-size: 36px;
+    border: 2px solid black;
+
+    z-index: 3000;
+}
+
+#thanks a {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/* footer */
+
+footer {
+    margin-top: 40px;
+    border-top: 2px solid gray;
+    margin-bottom: 80px;
+}
+
+footer p {
+    font-weight: bold;
+}

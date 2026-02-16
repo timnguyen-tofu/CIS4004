@@ -1,0 +1,211 @@
+/* color pallette */
+:root {
+  --blue:        #2563eb;   /* main accent color */
+  --blue-light:  #eff6ff;   /* soft blue for backgrounds */
+  --blue-dark:   #1d4ed8;   /* darker blue for hover states */
+  --text-dark:   #111827;   /* almost-black for headings */
+  --text-mid:    #374151;   /* dark gray for body text */
+  --text-light:  #6b7280;   /* lighter gray for dates / small text */
+  --border:      #e5e7eb;   /* subtle border color */
+  --white:       #ffffff;
+  --page-bg:     #f0f4f8;   /* very light blue-gray page background */
+
+  --font-body:    sans-serif;
+  --font-heading: Georgia, 'Times New Roman', serif;
+}
+
+/* main page */
+
+/* reset default spacing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--page-bg);
+  color: var(--text-mid);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+
+header {
+  background-color: var(--white);
+  padding: 28px 20px 20px 20px;
+  border-bottom: 4px solid var(--blue);
+}
+
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+/* contact links under the name */
+header p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+/* link styling */
+
+a {
+  color: var(--blue);
+  text-decoration: none;   /* remove the underline */
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--blue-dark);
+  text-decoration: underline;   /* underline shows back on hover */
+}
+
+/* main content */
+
+main {
+  background-color: var(--white);
+  margin: 20px 16px;
+  padding: 24px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* bio */
+main > p {
+  color: var(--text-mid);
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+section {
+  padding: 22px 0;
+  border-top: 1px solid var(--border);
+}
+
+section:first-of-type {
+  border-top: none;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+
+  /* blue pill background of text */
+  display: inline-block;
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--blue);
+  margin-bottom: 2px;
+}
+
+/*  paragraph inside a section that looks like a date */
+section p {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+/* list */
+
+ul {
+  padding-left: 20px;   /* indent the list */
+  margin-top: 8px;
+}
+
+li {
+  margin-bottom: 7px;
+  font-size: 15px;
+  color: var(--text-mid);
+}
+
+article {
+  background-color: var(--blue-light);
+  border: 1px solid #bfdbfe;   /* light blue border */
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+article a {
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin: 12px 0 18px 0;
+}
+
+/* desktop */
+
+@media (min-width: 900px) {
+
+  header,
+  main {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header {
+    margin-top: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    border-bottom: 4px solid var(--blue);
+    padding: 32px 36px 24px 36px;
+  }
+
+  header h1 {
+    font-size: 38px;
+  }
+
+  main {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 32px 36px;
+  }
+
+  section:nth-of-type(3) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  section:nth-of-type(3) h2 {
+    width: 100%;
+  }
+
+  section:nth-of-type(3) article {
+    flex: 1;
+    min-width: 260px;
+    margin-top: 0;
+  }
+
+}
